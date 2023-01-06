@@ -1,0 +1,13 @@
+Sub TransposeColumnsRows()
+  Dim SourceRange As Range
+  Dim DestRange As Range
+
+  Set SourceRange = Application.InputBox(Prompt:="Please select the range to transpose", Title:="Transpose Rows to Columns", Type:=8)
+  Set DestRange = Application.InputBox(Prompt:="Select the upper left cell of the destination range", Title:="Transpose Rows to Columns", Type:=8)
+
+  SourceRange.Copy
+  DestRange.Select
+  Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:=False, Transpose:=True
+  Application.CutCopyMode = False
+
+End Sub
