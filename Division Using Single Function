@@ -1,0 +1,6 @@
+def multiples(num,divisor):
+    if num % divisor == 0:
+        print ("The number is a multiple of "+ str(divisor))
+    else:
+        print ("The number is not divisible by " + str(divisor) + ", and the quotient is " + str (num // divisor) + " with remainder " + str (num % divisor))
+multiples(int(input ("Choose Dividend: ")), int(input ("Choose Divisor: ")))
