@@ -1,0 +1,8 @@
+import math
+print("Welcome to Investment Calculator")
+deposit = int (input ("Choose the Initial Deposit: "))
+interest_rate = int (input ("Choose the Interest Rate: "))
+number_years = int (input ("Choose the investment period: "))
+final_amount = deposit * math.pow(1 + interest_rate*0.01, number_years)
+print("The final amount after " + str (number_years) + "is " + str (final_amount)
++ "and the total interest accrued is " + str (final_amount - deposit))
